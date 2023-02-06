@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  background-color: aliceblue;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 50px;
+  background-color: aliceblue;
+  position: relative;
+}
+
+#date {
+  font-weight: 700;
+  left: 10px;
+}
+.arrow {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: blue;
+  color: antiquewhite;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#prev {
+  right: 55px;
+}
+
+#next {
+  right: 10px;
+}
+
+#time-based-image {
+  width: 100vw;
+  height: 426px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.date-box {
+  width: 80px;
+  height: 80px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px;
+  font-size: 12px;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+.focused {
+  background-color: lightblue;
+}
+.to-do-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  position: relative;
+
+}
+
+.to-do-title {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.to-do-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  margin-top: 20px;
+  top: 50px;
+}
+
+.to-do-time-input,
+.to-do-task-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin-right: 10px;
+}
+
+.to-do-task-list {
+  width: 60%;
+  margin-top: 20px;
+  border-radius: 25px;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.to-do-task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.to-do-task-time {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.to-do-task-date {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.to-do-task-description {
+  flex-grow: 1;
+  background-color: hsl(var(--hue), 50%, 80%);
+  text-align: center;
+  border-radius: 25px;
+}
+
+.to-do-task-delete-button {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 9px;
+  cursor: pointer;
+}

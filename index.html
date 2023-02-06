@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do page</title>
+</head>
+<body>
+  <header>
+    <div id="date"></div>
+    <div>
+      <span id="prev" class="arrow">&lt;</span>
+      <span id="next" class="arrow">&gt;</span>
+    </div>
+  </header>
+  <div id="time-based-image"></div>
+  <div id="dates">
+    <div id="date-1" class="date-box"></div>
+    <div id="date-2" class="date-box"></div>
+    <div id="date-3" class="date-box"></div>
+    <div id="date-4" class="date-box"></div>
+    <div id="date-5" class="date-box"></div>
+    <div id="date-6" class="date-box"></div>
+    <div id="date-7" class="date-box"></div>
+    <div id="date-8" class="date-box"></div>
+    <div id="date-9" class="date-box"></div>
+    <div id="date-10" class="date-box"></div>
+  </div>
+  <div class="to-do-section">
+    <h2 class="to-do-title">TO-DO LIST</h2>
+    <form class="to-do-form">
+      <div class="to-do-time-input">
+        <label for="to-do-time">Time:</label>
+        <input type="time" id="to-do-time" name="to-do-time">
+      </div>
+      <div class="to-do-date-input">
+        <label for="to-do-date">Date:</label>
+        <input type="date" id="to-do-date" name="to-do-date">
+      </div>
+      <div class="to-do-task-input">
+        <label for="to-do-task">Task:</label>
+        <input type="text" id="to-do-task" name="to-do-task">
+      </div>
+      <input type="submit" value="Add Task">
+    </form>
+    <ul class="to-do-task-list">
+    </ul>
+  </div>
+
+ 
+<script src="app.js" async></script>    
+</body>
+</html>
