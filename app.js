@@ -14,11 +14,11 @@ dateDisplay.textContent = currentDate.toLocaleDateString("en-US", options);
 
 const currentTime = currentDate.getHours();
 if (currentTime >= 0 && currentTime < 12) {
-  imageContainer.innerHTML = '<img src="morning.jpg">';
+  imageContainer.innerHTML = '<img src="morning.jpg" loading="lazy">';
 } else if (currentTime >= 12 && currentTime < 16) {
-  imageContainer.innerHTML = '<img src="afternoon.jpg">';
+  imageContainer.innerHTML = '<img src="afternoon.jpg" loading="lazy">';
 } else {
-  imageContainer.innerHTML = '<img src="evening.jpg">';
+  imageContainer.innerHTML = '<img src="evening.jpg" loading="lazy">';
 }
 
 prevArrow.addEventListener("click", function() {
@@ -76,3 +76,23 @@ toDoForm.addEventListener('submit', (e) => {
 
   toDoForm.reset();
 });
+
+function sortTasks() {
+  const toDoTaskItems = [...toDoTaskList.querySelectorAll('.to-do-task-item')];
+
+  toDoTaskItems.sort((a, b) => {
+    const aTime = a.querySelector('.to-do-task-time').innerText;
+    const bTime = b.querySelector('.to-do-task-time').innerText;
+    const aDate = a.querySelector('.to-do-task-date').innerText;
+    const bDate = b.querySelector('.to-do-task-date').innerText;
+
+    if (aDate === bDate) {
+      return aTime > bTime ? 1 : -1;
+    }
+    return aDate > bDate ? 1 : -1;
+  });
+
+  toDoTaskItems.forEach((task) => {
+    toDoTaskList.appendChild(task);
+  });
+}
